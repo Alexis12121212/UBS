@@ -1,0 +1,107 @@
+/*les styles CSS pour le fichier html : ubs.html sont non intégré au fichier html*/
+
+body, html { /* style de base pour html et body pour s'assurer que l'interface utilisateur utilise toute*/
+    height: 100%;
+    margin: 0;/*Supprimer les marges externe*/
+    padding: 0;/*Supprimer les marges interne */
+  }
+
+body {
+    font-family: Verdana;
+    color: #333333;
+    background-color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header, .footer {
+    background-color: #2a9df4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    font-size: 32px;
+}
+
+.footer {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex: 2;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.menu, .main, .right {
+    padding: 50px;
+}
+
+.menu {
+    width: 25%;
+    background-color: #d0e7ff;
+    border-right: 1px solid #b0c4de;
+}
+
+.menu a {
+    background-color: #2a9df4;
+    padding: 10px;
+    margin-top: 10px;
+    display: block; /*afficher chaque élément dans un block sinon lien superposer */
+    width: 98.2%; /*px ou % */
+    color: white;
+    text-decoration: none; /*Enlever le soulignement*/
+    border-radius: 20px;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #1c7dcf;
+}
+
+.main {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.right {
+    width: 25%;
+    background-color: #d0e7ff;
+    border-left: 1px solid #b0c4de;
+}
+
+h2 {
+    color: #2a9df4;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6; /*hauteur des lignes*/
+}
+
+
+@media (min-width: 620px) { /*règle de média appliquée lorsque la largeur de l'écran est d'au moins 600 pixels*/
+    .container {
+       flex-direction: column;
+    }
+    .menu, .main, .right {
+        width: 100%;
+        padding: 15px 0;
+        border-radius: 0;
+    }
+    .menu {
+        border-right: none;
+        border-bottom: 1px solid #b0c4de;
+    }
+
+    .right {
+        border-left: none;
+        border-top: 1px solid #b0c4de;
+    }
+}

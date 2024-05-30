@@ -1,0 +1,320 @@
+/*les styles CSS pour le fichier html sont non intégré au fichier html*/
+
+body, html { /* style de base pour html et body pour s'assurer que l'interface utilisateur utilise toute*/
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+display: flex;                                    /*diviser la page en 2 colonne*/
+            flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* ajouter l'image */
+  background-image: url("photo.jpg");
+
+  min-height: 380px;
+
+  /* Centrer et redimensionner  l'image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Ajouter des styles au conteneur de formulaire */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Champs de saisie  */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Définir le style pour le bouton d'envoi */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+p,h3{
+color: dimgray;
+font-size:18px; 
+}
+ /*Couleur de tous les boutons de la page web*/ 
+    .button-style {
+        background-color: rgb(0, 128, 77); /*couleur de fond */
+        border: none; /*pas de bordure*/
+        color: white; /*couleur du texte*/
+        padding: 15px 32px; /*espacement interne*/
+        text-align: center; /*alignement du texte*/
+        text-decoration: none; /*pas de soulignement*/
+        display: inline-block; /*Type d'affichage*/ 
+        font-size: 18px; /*taille de police*/ 
+        margin: 4px 2px; /* marges externes*/ 
+        cursor: pointer; /*forme du curseur*/ 
+        font-weight: bold; /*appliquer le style gras*/ 
+      } 
+
+a{
+color: green;
+font-size:18px;
+}
+
+span{             /*balise html : modifier une partie du texte*/
+color: dimgray
+}
+.section1{        /*classe qu'on a nommé*/
+background-color:whitesmoke;
+color:dimgray; 
+width: 175px;
+height: auto; 
+font-size:18px;
+padding:20px;
+margin:10px;
+
+}
+
+.section2{
+background-color:whitesmoke;
+color:green;
+font-weight:bold;
+width: 178px;
+height: auto; 
+font-size:18px;
+padding:20px;
+margin:10px;  /*<!-- padding : espacement interne, margin : espacement autour des blocs -->*/
+}
+
+.main {         /*.main et pas main car pas de balise main en html*/
+display: flex; /*diviser la page en 2 colonne*/
+flex: 1; /*diviser par 2, ajoute une 2ème section, flex=diviser */
+width: 70%; /*ajouter des marges de 15 % de chaque côté */
+margin: 20px auto;
+}
+
+.content {
+width: 80%;
+padding: 20px;
+}
+
+.sectionsleft {  /*sectionS car plusieurs section */
+width: 40%;
+display: flex;
+flex-direction: column;
+padding: 20px;
+}
+
+.sectionleft {
+background-color:#f0f0f0;  
+width: 250px;
+padding: 20px;
+margin: 10px;
+}
+      
+
+.containerleftright {  
+width: 70%;
+display: flex;
+justify-content: space-between;
+margin: 5px auto; /*Centre le contenu horizontalement */
+}
+
+.left, .right { 
+width: 60%;
+padding: 5px;
+}
+.button-container {
+margin: 20px 0;
+width : 70%;
+margin: 5px auto; /*centre le contenu horizontalement*/
+}
+
+/*classe css pour la page ceremonie */
+
+.containerceremony { 
+  width : 70%;
+  margin: auto; /*centre le contenu horizontalement*/
+  }
+
+  .button-ceremony {
+    background-color: green ; /*couleur de fond du bouton */
+    border: 5px solid black; /* bordure dorée*/
+    color: white; /*couleur du texte*/
+    padding: 15px 40px; /*espacement intérieur*/
+    text-align: center; /*alignement du texte*/
+    font-size: 18px; /*taille de police*/ 
+    font-weight: bold; /*Poids de la police (gras) */
+    margin: 10px 30px; /* marges externes*/ 
+    border-radius: 10px; /* 10: Coins aarondie*/
+    box-shadow: 0 10px 15px green;/*0:effet, Ombre */
+    font-family: 'Times New Roman'; /*Typographie*/
+  }
+
+
+
+/* classe css pour la page media : lien des 2 videos : propriété */
+
+.containerMedia { /*le grand cadre où il y aura les 2 vidéos */
+  width : 80%;
+  margin: auto; /*centre le contenu horizontalement*/
+  }
+
+.video-container {  /*Sous cadre où il y aura les 2 vidéos */
+display: flex;
+justify-content: space-around; /*Espacement égale entre les vidéos*/
+align-items: center;
+margin-top: 20px;
+}
+
+.video {  /* cadre pour chaque video de la page media */
+  flex: 1;
+  margin: 10px; 
+  }
+
+  iframe {  /*Balise pour intégrer la video youtube, avec des attributs*/
+    width : 100%;
+    height: 350px;
+    }
+
+    /*Balise pour la page admission*/
+    /*tableau 1*/
+    .-container.informations {
+      margin: 2px auto;
+      width : 80%;
+      padding: 30px; /*Espacement interne*/
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse; /*bordures adjacentes des cellules*/
+  }
+
+  th {
+    text-align: left;
+  }
+
+   /*tableau 2*/
+
+   caption {
+    caption-side: top; /*légende au dessus du tableau*/
+    font-size: 18px;
+    margin-bottom: 10px;/* espace entre la légende et le tableau*/
+    font-weight: bold;
+    text-align: center;/*centrer le légende*/
+    color: green;
+
+   }
+
+   /*Styles spécifiques pour le troisième tableau*/
+   .third-table {
+    border: 1px solid;
+    border-collapse: collapse;
+  
+   }
+
+   .third-table tr:nth-child(even){
+    background-color: rgba(150,212,212,0.4);
+   }
+
+   .third-table th:nth-child(even), .third-table td:nth-child(even) {
+    background-color: rgba(60, 150, 150, 0.4);
+   }
+   
+   /*élément avec id "myfooter"  et # pour l'identifiant */
+   #myfooter {
+    background-color: lightblue;
+    color: black;
+    padding: 30px;  /* Marge interne du cadre */
+    text-align: center;
+  }
+
+  /*pied de page avec le bouton*/
+  #myfooterJS {
+    font-size: 36px;
+    text-align: 36px;
+    margin-top: 50px;
+    text-transform: uppercase; /*Transforme le texte en majuscule*/
+    letter-spacing: 2px;
+  }
+
+  #myfooterJS:hover { /*hover = Styles lorsque l'élément "myfooter" est survolé */
+    color: green;
+  }
+
+  #button-myfooter {
+    display: block;/*Afficher en tant que bloc pour occuper toute la largeur */
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: lightblue;/*Couleur de fond du bouton*/
+    color: black;/*couleur du texte*/
+    border: 5px solid black;/*Bordure*/
+    padding: 15px 40px; /*Espacement intérieur*/
+    text-align: center;/*Alignement du texte*/
+    font-size: 22px;/*Taille de la police*/
+    font-weight: bold;/*Poids de la police*/
+    font-family: 'Times New Roman';/*Typographie*/
+  }
+  
+  #button-myfooter:hover {
+    background-color: green;
+  }
+
+  /*Style pour l'iframe ensibs */
+  #Iframe_ENSIBS {
+    border: 2px solid #2c3e50;
+    border-radius: 5px; /*Coins arrondis */
+  }
+  #Iframe_ENSIBS_a {
+    color: #2980b9; /*Couleur du texte du lien*/
+    text-decoration: none; /*Supprime la décoration par défaut (soulignement) */
+    font-weight: bold; /*texte en gras*/
+  }
+
+  #Iframe_ENSIBS_a:hover {
+    text-decoration: underline; /*Souligné au survol */
+  }
+
+  /*  */
+  #button-myfooter-informations {
+    background-color: lightblue ; /*Couleur du fond du bouton */
+    color: black;/*couleur du texte*/
+    border: 5px solid black;/*Bordure*/
+    padding: 15px 40px; /*Espacement intérieur*/
+    text-align: center;/*Alignement du texte*/
+    font-size: 18px;/*Taille de la police*/
+    font-weight: bold;/*Poids de la police*/
+    margin: 10px;/*marges*/
+    border-radius: 10px; /*10 = Coins arrondis*/
+    font-family: 'Times New Roman';/*Typographie*/
+  }
+  #button-myfooter-informations :hover {
+    background-color: green; 
+  }

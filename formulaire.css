@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    margin: 0; /*espacement externe*/
+    padding: 20px; /*espacement interne*/
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+    font-style: oblique;
+}
+
+/*Styles pour le formulaire*/
+form {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /*Largeur maximale du formulaire*/
+    margin: 0 auto; /*espacement verticale = 0 auto = espacement horizontale */
+}
+
+/*Styles pour les labels */
+label {
+    display: bolck; /* Définir l'élément comme un bloc, prenant toute la largeur */
+    margin-bottom: 8px; /*Ajouter un espace de 8 pixels en bas de l'éléments*/
+    font-weight: bold; /*texte en gras*/
+    color: burlywood; /*Couleur du texte */
+}
+
+/*Styles pour les champs de texte et autres éléments de formulaire */
+/*Appliquer les styles aux champs de texte, email, date, select et textarea */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 20px); /*la largeur : 100% du conteneur parent moins 20 pixels */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /*Inclure le padding et la bordure dans la largeur totale */
+    background-color: bisque;
+}
+
+/*Styles pour les boutons radio et les cases à cocher*/
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px; /*marge à droite des boutons radio et des cases à cocher */
+}
+
+/*Styles pour les étiquettes après les boutons radio et les cases à cocher */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block; /*texte alignée avec les boutons */
+    margin-right: 20px;
+    font-weight: normal; /*texte standard */
+}
+
+/*Syles pour le bouton de soumission*/
+input[type="submit"] {
+    background-color: green;
+    color: beige;
+    padding: 10px 20px; /*espacement interne verticale = 10px |||  20px = espacement externe horizontale */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+textarea {
+    background-color: rgb(190, 190, 98);
+}
+
+input[type="submit"]:hover {
+    background-color: yellowgreen; /*couleur du bouton au survol */
+}

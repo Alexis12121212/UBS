@@ -1,0 +1,47 @@
+<!-- Page Information -->
+<!DOCTYPE html>
+<html lang="fr">
+    <link rel="stylesheet" href="alternance.css">
+    <script src="information.js"></script>
+
+<head>
+    <title> Information </title>
+</head>
+<body>
+
+    <a href="alternance.html"> <img src="Logo.JPG" width=250px height=180px alt="Logo"></a>
+
+    <div class="container_informations">
+
+        <!--Page plus d'informations : ajouter un cadre en ligne-->
+        <!--iframe : afficher une page Web dans une page Web-->
+
+    <h2>Plus d'informations</h2>
+    <iframe src="https://www-ensibs.univ-ubs.fr/fr/index.html"
+    height="300px" width="100%" id="Iframe_ENSIBS"></iframe>
+    <h3>Découvrir plus d'information sur notre site :
+        <a href="https://www-ensibs.univ-ubs.fr/fr/formations/formations-d-ingenieurs/genie-industriel-4-0.html"
+        target="iframe_GI" id="Iframe_ENSIBS_a">ensibs.fr</a>
+    </h3>
+
+    <!--Modifier le contenu et le style par JS-->
+    <h2>Nous contacter</h2>
+    <h3 id="MyfooterJS2">Retrouvez nous sur notre site de Lorient. </h3>
+
+    <!--myFunction vient du fichier information.js-->
+
+    <button type="button" onclick="myFunction()" id="button-myfooter">Retrouvez nous ! </button>
+
+    <!--Affichage date et heure par JS-->
+    <h2>Dernière consultation</h2>
+    <button type="button" id="button-myfooter-informations"
+    onclick="document.getElementById('consultation').innerHTML= 
+    new Date().toLocaleString('fr-FR', {weekday: 'long', year:'numeric',month:'long', day:'numeric', 
+    hour:'2-digit', minute: '2-digit', second:'2-digit'})">
+    Cliquer ici
+    </button>
+    <p id="consultation"></p>
+
+    </div>
+</body>
+</html>

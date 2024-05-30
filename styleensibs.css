@@ -1,0 +1,104 @@
+/*les styles CSS pour le fichier html : ensibs.html sont non intégré au fichier html*/
+
+body, html { /* style de base pour html et body pour s'assurer que l'interface utilisateur utilise toute*/
+    height: 100%;
+    margin: 0;/*Supprimer les marges externe*/
+    padding: 0;/*Supprimer les marges interne */
+  }
+
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+header, footer {
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    font-size: 32px;
+}
+
+footer {
+    font-size: 16px;
+}
+
+.container {
+    flex: 1;
+    display: grid; /*Concevoir une page avec des lignes et des colonnes */
+    width: 100%;
+    margin: 0;
+}
+
+nav, article {
+    padding: 20px;
+}
+
+nav {
+    background: whitesmoke;
+    flex: 1;
+    font-size: 15px;
+}
+
+article {
+    background-color: white;
+    font-size: 18px;
+}
+
+nav ul {                    /*ul liste d'élement non ordonnée*/
+    list-style-type: none; /*Supprimer les puces ou numéros par défaut (ordonnée ou non)*/
+    padding: 0;
+}
+
+nav ul li { /*li = element fde la liste*/
+    flex: 1;
+}
+
+nav ul li a { /*li = element fde la liste*/
+    color: black;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px; /*coins arrondi*/
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /*la largeur et la hauteur des bordures et les espacements internes*/
+}
+
+nav ul li a:hover {
+    background-color: #004d00;
+    color: white;
+}
+
+.btn {
+    display: inline-block; /*élément de ligne*/
+    padding: 15px 25px;
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    background-color: #004d00;
+    border-radius: 5px; /*coins arrondi*/
+    text-decoration: none; /*enlever le soulignement du texte*/
+}
+.btn:hover {
+    background-color: #003300;
+}
+
+@media (min-width: 600px) { /*règle de média appliquée lorsque la largeur de l'écran est d'au moins 600 pixels*/
+    .container {
+        grid-template-columns: 20% 80%; /*deux colonnes*/
+        grid-template-rows: none; /*aucune ligne*/
+    }
+    nav {
+        order: 1; /*placé au premier dans l'ordre de la grille*/
+    }
+    article {
+        order: 2; /*placé au deuxième dans l'ordre de la grille*/
+    }
+}
